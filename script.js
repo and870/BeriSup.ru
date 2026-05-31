@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
   renderAlbum();
 });
+// Добавляем класс мигания кнопке «Забронировать»
+const bookBtn = document.querySelector('.bubble-book-btn');
+
+if (bookBtn) {
+  bookBtn.classList.add('blinking');
+}
