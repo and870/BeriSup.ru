@@ -801,7 +801,7 @@ a {
 
 .bubble-book-btn {
   position: fixed;
-  top: 40%;
+  top: 80%;
   right: 18px;
   transform: translateY(-50%);
   z-index: 999;
