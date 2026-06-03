@@ -797,6 +797,8 @@ a {
   font-weight: 700;
 }
 
+/* Обновлённая кнопка "Забронировать" - КРАСНАЯ с усиленным белым миганием (без прозрачности кнопки) */
+
 .bubble-book-btn {
   position: fixed;
   top: 40%;
@@ -807,19 +809,19 @@ a {
   width: clamp(90px, 20vw, 170px);
   height: clamp(90px, 20vw, 170px);
   border-radius: 50%;
-  border: 1px solid rgba(127, 224, 255, 0.4);
-  color: #071d3a;
+  border: 1px solid rgba(255, 80, 80, 0.6);
+  color: #ffffff;
   text-align: center;
   padding: 8px;
   background:
-    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.35), transparent 40%),
-    linear-gradient(145deg, rgba(127,224,255,0.35), rgba(140,242,194,0.20));
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.5), transparent 40%),
+    linear-gradient(145deg, rgba(255,60,60,0.55), rgba(255,30,30,0.40));
   backdrop-filter: blur(16px);
   box-shadow:
-    0 0 12px rgba(127, 224, 255, 0.3),
-    0 14px 36px rgba(0,0,0,0.16);
+    0 0 12px rgba(255, 60, 60, 0.5),
+    0 14px 36px rgba(0,0,0,0.20);
   font-weight: 800;
-  font-size: clamp(10px, 1.4vw, 14px);
+  font-size: clamp(12px, 1.8vw, 16px);
   line-height: 1.2;
   cursor: pointer;
   transition: all 0.35s ease;
@@ -831,22 +833,26 @@ a {
   overflow: hidden;
 }
 
+/* Мигание БЕЛЫМ СВЕТОМ (кнопка остаётся плотной, мигает только свечение) */
 .bubble-book-btn.blinking {
-  animation: blinkAnimation 1.5s ease-in-out infinite;
+  animation: blinkAnimation 1s ease-in-out infinite;
+  opacity: 1 !important;
 }
 
 @keyframes blinkAnimation {
   0%, 100% {
-    opacity: 1;
     box-shadow:
-      0 0 12px rgba(127, 224, 255, 0.3),
-      0 14px 36px rgba(0,0,0,0.16);
+      0 0 30px rgba(255, 255, 255, 1),
+      0 0 60px rgba(255, 60, 60, 0.9),
+      0 0 90px rgba(255, 60, 60, 0.6),
+      0 14px 36px rgba(0,0,0,0.20);
   }
   50% {
-    opacity: 0.35;
     box-shadow:
-      0 0 4px rgba(127, 224, 255, 0.15),
-      0 6px 18px rgba(0,0,0,0.1);
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 60, 60, 0.4),
+      0 0 30px rgba(255, 60, 60, 0.2),
+      0 6px 18px rgba(0,0,0,0.15);
   }
 }
 
@@ -855,26 +861,27 @@ a {
   opacity: 1 !important;
   transform: translateY(-50%) scale(1.08);
   background:
-    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.5), transparent 40%),
-    linear-gradient(145deg, rgba(127,224,255,0.5), rgba(140,242,194,0.30));
-  border-color: rgba(127, 224, 255, 0.7);
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.7), transparent 40%),
+    linear-gradient(145deg, rgba(255,80,80,0.75), rgba(255,40,40,0.60));
+  border-color: rgba(255, 100, 100, 0.9);
   box-shadow:
-    0 0 28px rgba(127, 224, 255, 0.7),
-    0 0 50px rgba(127, 224, 255, 0.45),
-    0 18px 44px rgba(0,0,0,0.20);
+    0 0 40px rgba(255, 100, 100, 0.8),
+    0 0 60px rgba(255, 60, 60, 0.5),
+    0 18px 44px rgba(0,0,0,0.25);
 }
 
 .bubble-book-btn:active {
   transform: translateY(-50%) scale(0.96);
 }
 
+/* Адаптив для мобильных */
 @media (max-width: 768px) {
   .bubble-book-btn {
     top: 35%;
     right: 12px;
     width: clamp(80px, 22vw, 140px);
     height: clamp(80px, 22vw, 140px);
-    font-size: clamp(9px, 1.3vw, 12px);
+    font-size: clamp(11px, 1.5vw, 14px);
     padding: 6px;
   }
 }
@@ -885,7 +892,7 @@ a {
     right: 10px;
     width: clamp(70px, 24vw, 120px);
     height: clamp(70px, 24vw, 120px);
-    font-size: clamp(8px, 1.2vw, 11px);
+    font-size: clamp(10px, 1.3vw, 13px);
     padding: 5px;
   }
 }
@@ -896,7 +903,7 @@ a {
     right: 8px;
     width: clamp(64px, 26vw, 100px);
     height: clamp(64px, 26vw, 100px);
-    font-size: clamp(7px, 1.1vw, 10px);
+    font-size: clamp(9px, 1.2vw, 12px);
     padding: 4px;
   }
 }
