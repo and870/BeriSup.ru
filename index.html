@@ -79,122 +79,489 @@
         <img src="pics/logo-sup.png" alt="Логотип проката сапбордов" class="logo">
       </a>
 
-      <div class="nav-buttons">
-        <button class="nav-btn" data-modal="address">Адрес</button>
+      <button class="mobile-menu-btn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-buttons">
+        <a href="#slider" class="nav-btn">Услуги</a>
+        <a href="#address" class="nav-btn">Адрес</a>
+        <a href="#about" class="nav-btn">О нас</a>
         <button class="nav-btn" data-modal="lease">Альбом</button>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main class="main-content" id="top">
     <section class="hero">
       <div class="hero-text">
-        <span class="hero-badge">SUP • Москва • Крылатское</span>
+        <span class="hero-badge">SUP • Москва • Живописный мост</span>
         <h1>Прокат сапбордов у Москвы-реки</h1>
         <p>
-          Спокойные прогулки по Москве-реке, обучение для новичков, фотосессии и приватные маршруты
-          для тех, кто хочет красиво провести день на воде.
+          <strong>Спокойные прогулки по Москве-реке, обучение для новичков, фотосессии и приватные маршруты</strong>
+          <strong>для тех, кто хочет красиво провести день на воде.</strong>
         </p>
         <p>
-        Наш телефон: 8 (989) 604-61-53
+          <strong>Наш телефон: 8 (989) 604-61-53</strong>
         </p>
         <div class="hero-actions">
           <button class="hero-btn" data-modal="rent">Цены на прокат</button>
           <button class="hero-btn hero-btn-outline" data-modal="address">Как добраться</button>
         </div>
       </div>
+    </section>
 
-      <div class="hero-panel">
-        <div class="hero-card">
-          <h2>Почему это удобно</h2>
-          <ul>
-            <li>Прокат для новичков и опытных.</li>
-            <li>Спокойные прогулки и живые маршруты.</li>
-            <li>Инструктор и базовое обучение.</li>
-            <li>Фотосессии, туры и корпоративы.</li>
-          </ul>
-        </div>
+    <!-- Слайд-шоу -->
+    <section id="slider" class="slider-section">
+      <button class="slider-prev" id="sliderPrev">&#8249;</button>
+      <button class="slider-next" id="sliderNext">&#8250;</button>
+      
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          
+          <!-- Слайд 1: Почему выбирают нас -->
+          <div class="slider-slide" style="background-image: url('pics/xphoto.jpg');">
+            <div class="slide-content about-content">
+              <h2>Почему выбирают нас</h2>
+              <p>
+                <strong>Мы делаем отдых на сапбордах лёгким, понятным и красивым. Можно приехать одному, вдвоём, компанией друзей
+                или коллег. Если вы впервые пробуете сап, мы объясним всё спокойно и без лишней суеты.</strong>
+              </p>
+              <p>
+                <strong>Для тех, кто уже уверенно стоит на воде, у нас есть прогулки по реке, маршруты для фото,
+                индивидуальные форматы и варианты для мероприятий.</strong>
+              </p>
+            </div>
+          </div>
 
-        <div class="hero-card hero-card-soft">
-          <h2>Летняя атмосфера</h2>
-          <p>
-            Тёплый воздух, вода, красивые маршруты и ощущение отдыха без суеты.
-            Идеально для пары, семьи, друзей или небольшой команды.
-          </p>
+          <!-- СЛАЙД 2: Прогулки (ИСПРАВЕН: цена прогулки с инструктором вместо аренды сапа) -->
+          <div class="slider-slide" style="background-image: url('pics/photoy.jpg');">
+            <div class="slide-content">
+              <h2>Прогулки по Москве-реке</h2>
+              <p>
+                <strong>Спокойный формат для тех, кто хочет насладиться водой, видом и атмосферой без спешки.
+                Прогулка подходит для пары, семьи или небольшой компании.</strong>
+              </p>
+              <p>
+                <strong>Во время маршрута вы сможете уверенно освоиться на доске и просто отдохнуть.
+                Мы предлагаем маршруты разной сложности и длительности.</strong>
+              </p>
+              <p class="price">
+                <strong>Цены в этом сезоне ⬇️</strong><br>
+                <strong>▪️ Групповая прогулка на сапах с инструктором от Живописного моста в Бездонное озеро — 2 часа</strong><br>
+                <strong>По будням — 2500₽</strong><br>
+                <strong>По выходным — 3000₽</strong>
+              </p>
+              <p class="phone">
+                <strong>Для брони: 8 (989) 604-61-53</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Слайд 3: Корпоративы -->
+          <div class="slider-slide" style="background-image: url('pics/photoE.jpg');">
+            <div class="slide-content">
+              <h2>Корпоративы на воде</h2>
+              <p>
+                <strong>Летний тимбилдинг на воде — это необычно, спокойно и очень запоминающе. 
+                Формат подходит для команды, которой нужен живой и красивый отдых.</strong>
+              </p>
+              <p>
+                <strong>Можно организовать прогулку, мини-соревнование, фото-сессию или совместный выезд на природу.
+                Идеально для сплочения коллектива в неформальной обстановке.</strong>
+              </p>
+              <p class="price">
+                <strong>Цена: договорная, зависит от:<br>
+                • Количество людей<br>
+                • Длительность мероприятия<br>
+                • День недели (будни/выходные)<br>
+                • Дополнительный сервис</strong>
+              </p>
+              <p class="phone">
+                <strong>Для брони и консультации:<br> 8 (989) 604-61-53</strong>
+              </p>
+            </div>
+          </div>
+
         </div>
+      </div>
+      
+      <div class="slider-dots" id="sliderDots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
 
-    <section class="bubbles-section">
-      <h2 class="section-title">Выберите формат отдыха</h2>
-      <div class="bubbles-container" id="bubblesContainer">
-        <button class="bubble-btn" data-modal="walk">Прогулки</button>
-        <button class="bubble-btn" data-modal="training">Обучение</button>
-        <button class="bubble-btn" data-modal="group">Туры</button>
-        <button class="bubble-btn" data-modal="photo">Фотосессии</button>
-        <button class="bubble-btn" data-modal="corporate">Корпоративы</button>
-        <button class="bubble-btn" data-modal="equipment">Оборудование</button>
+    <!-- Секция FAQ -->
+    <section class="faq-section">
+      <!-- Стрелки ПРЯМО в секции, ПЕРЕД section-background -->
+      <button class="faq-prev" id="faqPrev">&#8249;</button>
+      <button class="faq-next" id="faqNext">&#8250;</button>
+      
+      <div class="section-background" style="background-image: url('pics/contenf1.jpg');"></div>
+      
+      <div class="section-content">
+        <h2>Часто задаваемые вопросы</h2>
+        
+        <div class="faq-container" id="faqContainer">
+          <!-- Вопросы 1-4 (страница 1) -->
+          <div class="faq-page active" data-page="1">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Что такое SUP?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>SUP (Stand Up Paddle) — это серфинг на специальной доске с использованием весла. Вы стоите на доске и гребеёте, перемещаясь по воде. Это простой и доступный вид активного отдыха.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Я первый раз, смогу ли я?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Конечно! SUP подходит для новичков. Перед выходом на воду мы проводим инструктаж (5–10 минут), показываем стойку, технику гребка и основы безопасности. Большинство людей встают на доску уже после первых попыток.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Что если я упаду с сапа?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Ничего страшного! Вода в районе Живописного моста спокойная, глубина небольшая. Вы упадёте в воду рядом с доской, которую легко поймать. После инструктажа мы поможем вам вернуться на доску. Обязательно возьмите с собой сменную одежду.</strong></p>
+              </div>
+            </div>
+
+            <!-- ВОПРОС О ЦЕНАХ (ИСПРАВЕН: цена на SUP-доску вместо групповой прогулки) -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Сколько стоит прогулка на SUP?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Цены в этом сезоне ⬇️</strong><br><br>
+                <strong>▪️ SUP-доска (аренда):</strong><br>
+                <strong>1 час в будни — 1300₽</strong><br>
+                <strong>2 часа в будни — 2000₽</strong><br>
+                <strong>1 час в выходные — 1500₽</strong><br>
+                <strong>2 часа в выходные — 2500₽</strong><br><br>
+                <strong>▪️ Групповая прогулка на сапах с инструктором</strong><br>
+                <strong>От Живописного моста в Бездонное озеро — 2 часа</strong><br>
+                <strong>По будням — 2500₽</strong><br>
+                <strong>По выходным — 3000₽</strong><br><br>
+                <strong>▪️ Байдарка:</strong><br>
+                <strong>1 час в будни — 2000₽</strong><br>
+                <strong>2 часа в будни — 3000₽</strong><br>
+                <strong>1 час в выходные — 2500₽</strong><br>
+                <strong>2 часа выходные — 4000₽</strong><br>
+                <strong>Следующий час +1000₽</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Вопросы 5-8 (страница 2) -->
+          <div class="faq-page" data-page="2">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Сколько длится прогулка?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Выбирайте длительность: 1 или 2 часа. Время считается с момента выхода на воду. За это время вы успеете освоиться, прокатиться по живописному маршруту и сделать красивые фото.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Ко скольки приезжать?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Приезжайте за 15 минут до начала прогулки. Мы встретим вас, выдадим оборудование, жилет и проведём инструктаж. Точное место встречи уточните при бронировании по телефону: 8 (989) 604-61-53.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Как одеваться?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Одежда для прогулки:<br>
+                • Лёгкая спортивная одежда (шорты, футболка, купальник)<br>
+                • Обувь, которая не боится воды (сланцы, акваобувь, старые кроссовки)<br>
+                • Солнцезащитные очки с ремешком, головной убор<br>
+                • Сменную одежду возьмите с собой<br>
+                • Летом можно быть почти в купальнике, весной/осенью — в термобелье</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Как оплатить?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Оплата при встрече наличными или переводом на карту. При бронировании уточните удобный способ оплаты. Предоплата не требуется, но рекомендуется забронировать место заранее.</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Вопросы 9-12 (страница 3) -->
+          <div class="faq-page" data-page="3">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Купил прогулку, но не могу поехать. Можно ли перенести?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Да, вы можете перенести прогулку на другую дату. Сообщите нам об этом минимум за 24 часа до начала. Позвоните или напишите нам: 8 (989) 604-61-53.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Как добраться до места встречи?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Мы находимся в Москве, у Живописного моста, парк Сказка, рядом с Москвой-рекой.<br>
+                <strong>Метро:</strong> Мирный (10 минут пешком до воды)<br>
+                <strong>На машине:</strong> парковка рядом с местом встречи<br>
+                Точный адрес и точку навигатора отправим при бронировании.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>С детьми можно?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Да, дети от 6 лет могут участвовать при условии сопровождения взрослых. Для детей используются специальные детские доски и жилеты. Минимальный возраст уточните при бронировании.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>С собаками можно?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Да, с собаками можно! Собака должна быть в жилете для плавания (можно взять у нас). Предупредите нас заранее, что будете с питомцем.</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Вопросы 13-16 (страница 4) -->
+          <div class="faq-page" data-page="4">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Сколько стоит аренда SUP-доски?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <!-- ИСПРАВЕН: вставлена цена на SUP (было пусто) -->
+              <div class="faq-answer">
+                <p><strong>Цены в этом сезоне ⬇️</strong><br><br>
+                <strong>▪️ SUP-доска:</strong><br>
+                <strong>1 час в будни — 1300₽</strong><br>
+                <strong>2 часа в будни — 2000₽</strong><br>
+                <strong>1 час в выходные — 1500₽</strong><br>
+                <strong>2 часа выходные — 2500₽</strong><br><br>
+                <strong>В стоимость входит: доска, весло, жилет, инструктаж.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Куда мы приплывем? Какой маршрут?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>Маршрут зависит от погоды и уровня воды. Обычно мы плывём от Живописного моста в сторону Бездонного озера. Это живописный маршрут с красивыми видами, спокойной водой и возможностью сделать фото.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Ожидается дождь / плохая погода. Что делать?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>При сильном дожде, грозе или штормовом предупреждении прогулка отменяется. Мы свяжемся с вами заранее и предложим перенести на другой день или вернём полную стоимость. При лёгком дожде прогулка может состояться — уточните у нас.</strong></p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Есть ли где переодеться?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p><strong>На месте есть возможность переодеться (палатка/тент). Возьмите с собой сменную одежду, полотенце и средства гигиены. Душа на месте нет, но рядом есть кафе и общественные туалеты.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Точки для FAQ -->
+      <div class="faq-dots" id="faqDots">
+        <span class="faq-dot active" data-page="1"></span>
+        <span class="faq-dot" data-page="2"></span>
+        <span class="faq-dot" data-page="3"></span>
+        <span class="faq-dot" data-page="4"></span>
       </div>
     </section>
 
-    <section class="content10">
-      <div class="textforcontent">
-        <h2>Почему выбирают нас</h2>
+    <!-- Секция О НАС (перед футером) -->
+    <section class="about-section" id="about">
+      <div class="hero-text">
+        <h2>О нас</h2>
         <p>
-          Мы делаем отдых на сапбордах лёгким, понятным и красивым. Можно приехать одному, вдвоём, компанией друзей
-          или коллег. Если вы впервые пробуете сап, мы объясним всё спокойно и без лишней суеты.
+          <strong>БЕРИСАП</strong> — это современный прокат сапбордов и каяков 
+          на берегах Москвы-реки.
         </p>
-        <p>
-          Для тех, кто уже уверенно стоит на воде, у нас есть прогулки по реке, маршруты для фото,
-          индивидуальные форматы и варианты для мероприятий.
-        </p>
-      </div>
 
-      <div class="image-wrap">
-        <img class="imgcontent" src="pics/PIC1.jpeg" alt="Прокат сапбордов в Крылатском">
+        <p>
+          <strong>Мы работаем с 10:00 до 22:00 и базируемся недалеко от Живописного моста.
+          Наш прокат находится у парка Сказка — живописное место у Москвы-реки, 
+          куда легко добраться из любой точки столицы.</strong>
+        </p>
+
+        <p>
+          <strong>Мы предлагаем вам незабываемый отдых на воде с качественным оборудованием, 
+          спокойным сервисом и вниманием к деталям. Можно приехать одному, вдвоём, 
+          компанией друзей или коллег.</strong>
+        </p>
+
+        <div class="about-highlight">
+          <strong>Перед выходом на воду вы получите инструктаж, а при необходимости — помощь с посадкой и первым стартом.</strong>
+        </div>
+
+        <div class="about-features">
+          <div class="feature">
+            <div class="feature-icon">🏆</div>
+            <div class="feature-title">Качество</div>
+            <div class="feature-text"><strong>Новое оборудование, регулярное обслуживание</strong></div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">Безопасность</div>
+            <div class="feature-text"><strong>Спасательные жилеты, инструктаж, страховка</strong></div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">📍</div>
+            <div class="feature-title">Локация</div>
+            <div class="feature-text"><strong>Живописный мост, парк Сказка, Москва-река</strong></div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">💰</div>
+            <div class="feature-title">Цены</div>
+            <div class="feature-text"><strong>От 1300 ₽/час, скидки для групп</strong></div>
+          </div>
+        </div>
+
+        <p class="about-time">
+          <strong>Работаем ежедневно с 10:00 до 22:00</strong><br>
+          <strong>Сезон: май — сентябрь</strong>
+        </p>
       </div>
     </section>
   </main>
 
+<!-- Секция АДРЕС -->
+<section class="address-section" id="address">
+  <div class="hero-text">
+    <h2>Как добраться</h2>
+    
+    <!-- Группируем текст в один блок -->
+    <div class="address-text">
+      <p>
+        <strong>Адрес:</strong><br>
+        <strong>Москва, парк Сказка<br>
+        Парковка № 27</strong>
+      </p>
+
+      <p>
+        <strong>Бесплатный автобус:</strong> <strong>Со 2-го выхода метро Крылатское ходит бесплатный автобус до нашего проката</strong>
+      </p>
+
+      <p>
+        <strong>Телефон:</strong> <strong>8 (989) 604-61-53</strong>
+      </p>
+
+      <p>
+        <strong>Режим работы:</strong><br>
+        <strong>Ежедневно с 10:00 до 22:00<br>
+        Сезон: май — сентябрь</strong>
+      </p>
+    </div>
+
+    <!-- Карта Яндекса -->
+    <div class="map-container">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad89505cb5c3c10b5d9ea06e44de5778035b01507e9eb34f25bba9aebbcdfba72&source=constructor"
+              width="100%"
+              height="300"
+              frameborder="0"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>BeriSup</h3>
+        <p><strong>Прокат сапбордов и байдарок<br>Москва, Живописный мост, парк Сказка</strong></p>
+        <p><strong>Тел: 8 (989) 604-61-53</strong></p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/berisupmoscow?igsh=MWcweDM2Z3M4MmpjaA==" target="_blank" rel="noopener noreferrer" class="social-link insta">IG</a>
+        <a href="https://t.me/berisup" target="_blank" rel="noopener noreferrer" class="social-link tg">TG</a>
+        <a href="https://max.ru/u/f9LHodD0cOKjfUtiDFB5X8RWcJbV8vfsfDat3PkGOKWVnFn-PLmIX2QoIZY" target="_blank" rel="noopener noreferrer" class="social-link max">MAX</a>
+      </div>
+      <!-- Публичная оферта -->
+<div class="footer-legal">
+  <a href="#offer" class="footer-legal-link" data-modal="offer">Публичная оферта</a>
+</div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО ЦЕН -->
   <div class="modal" id="rentModal">
     <div class="modal-content">
       <button class="close" data-close type="button">&times;</button>
-      <h2>Прокат сапов</h2>
-       <p>Цены в этом сезоне ⬇️ <br>
-▪️SUP<br>
-1 час в будни - 1300р<br>
-2 часа в будни - 2000р<br>
-1 час в выходные - 1500р<br>
-2 часа выходные - 2500р<br>
-<br>
-▪️Групповая прогулка на сапах с инструктором от Живописного моста в Бездонное озеро - 2 часа <br>
-По будням - 2500р<br>
-По выходным - 3000р<br>
-<br>
-▪️Байдарка:<br>
-1 час в будни - 2000р<br>
-2 часа в будни - 3000р<br>
-1 час в выходные  - 2500р<br>
-2 часа выходные - 4000р<br>
-Следующий час + 1000р<br>
-<br>
- <strong> 
-Перед выходом на воду вы получите инструктаж, а при необходимости — помощь с посадкой и первым стартом.
-</strong> 
-      </p>
-     </div>
-  </div>
-
-  <div class="modal" id="addressModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Наш адрес</h2>
-      <p>
-        Мы находимся в Москве, в районе Крылатское. Это удобная локация для прогулок у воды, встреч с друзьями и летнего отдыха.
-      </p>
-      <p>
-        Точку встречи и маршрут лучше уточнить заранее, чтобы мы быстро вас встретили и подготовили оборудование.
-      </p>
+      <h2>Цены на прокат</h2>
+      <p><strong>Цены в этом сезоне ⬇️</strong></p>
+      <p><strong>▪️ SUP</strong><br>
+      <strong>1 час в будни — 1300₽</strong><br>
+      <strong>2 часа в будни — 2000₽</strong><br>
+      <strong>1 час в выходные — 1500₽</strong><br>
+      <strong>2 часа выходные — 2500₽</strong></p>
+      <p><strong>▪️ Групповая прогулка на сапах с инструктором от Живописного моста в Бездонное озеро — 2 часа</strong><br>
+      <strong>По будням — 2500₽</strong><br>
+      <strong>По выходным — 3000₽</strong></p>
+      <p><strong>▪️ Байдарка:</strong><br>
+      <strong>1 час в будни — 2000₽</strong><br>
+      <strong>2 часа в будни — 3000₽</strong><br>
+      <strong>1 час в выходные — 2500₽</strong><br>
+      <strong>2 часа выходные — 4000₽</strong><br>
+      <strong>Следующий час +1000₽</strong></p>
+      <p><strong>Для брони:</strong> <strong>8 (989) 604-61-53</strong></p>
+      <p><strong>Перед выходом на воду вы получите инструктаж, а при необходимости — помощь с посадкой и первым стартом.</strong></p>
     </div>
   </div>
 
@@ -207,120 +574,186 @@
     </div>
   </div>
 
-  <div class="modal" id="walkModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Прогулки по Москве-реке</h2>
-      <p>
-        Спокойный формат для тех, кто хочет насладиться водой, видом и атмосферой без спешки.
-        Прогулка подходит для пары, семьи или небольшой компании.
-      </p>
-      <p>
-        Во время маршрута вы сможете уверенно освоиться на доске и просто отдохнуть.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="trainingModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Обучение</h2>
-      <p>
-        Если вы впервые пробуете сапборд, мы поможем начать правильно. Инструктор покажет стойку, баланс,
-        технику гребка и базовые правила безопасности.
-      </p>
-      <p>
-        После короткой тренировки вы сможете спокойно выйти на воду и почувствовать себя увереннее.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="groupModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Групповые туры</h2>
-      <p>
-        Формат для друзей, семей, дней рождения и небольших выездов. Мы поможем организовать маршрут
-        и сделать прогулку комфортной для всех.
-      </p>
-      <p>
-        Можно заранее обсудить длительность маршрута, темп и остановки для фото и отдыха.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="photoModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Фотосессии</h2>
-      <p>
-        Сапборд — отличный фон для красивых летних фото. Мы можем помочь с локацией, маршрутом
-        и общей атмосферой, чтобы кадры выглядели живо и дорого.
-      </p>
-      <p>
-        Такой формат подойдёт для личной съёмки, пары, семьи или контента для соцсетей.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="corporateModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Корпоративы</h2>
-      <p>
-        Летний тимбилдинг на воде — это необычно, спокойно и очень запоминающе. Формат подходит для команды,
-        которой нужен живой и красивый отдых.
-      </p>
-      <p>
-        Можно организовать прогулку, мини-соревнование, фото-сессию или совместный выезд на природу.
-      </p>
-    </div>
-  </div>
-
-  <div class="modal" id="equipmentModal">
-    <div class="modal-content">
-      <button class="close" data-close type="button">&times;</button>
-      <h2>Прокат оборудования</h2>
-      <p>
-        В аренду доступны сапборды, вёсла, спасательные жилеты и всё необходимое для комфортного выхода на воду.
-        Мы поможем выбрать подходящий комплект под ваш план отдыха.
-      </p>
-      <p>
-        Если вы не уверены, что именно взять, просто расскажите, как хотите провести день — и мы подскажем вариант.
-      </p>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-info">
-        <h3>Прокат сапбордов в Крылатском</h3>
-        <p>Отдых на воде, прогулки по Москве-реке, обучение и фотосессии.</p>
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте" class="social-link vk">VK</a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link insta">IG</a>
-        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-link tg">TG</a>
-        <a href="https://max.ru/" target="_blank" rel="noopener noreferrer" aria-label="MAX" class="social-link max">MAX</a>
-        <p>Наш телефон: 8 (989) 604-61-53</p>
-      </div>
-    </div>
-  </footer>
-
   <div class="lightbox-overlay" id="lightbox">
     <button class="lightbox-close" id="lightboxClose">&times;</button>
     <img id="lightboxImg" src="" alt="Увеличенное изображение">
   </div>
-<button class="bubble-book-btn" data-modal="book">Забронировать</button>
-<div class="modal" id="bookModal">
+
+  <button class="bubble-book-btn blinking" data-modal="book">Забронировать</button>
+  
+  <div class="modal" id="bookModal">
+    <div class="modal-content">
+      <button class="close" data-close type="button">&times;</button>
+      <h2>Бронирование</h2>
+      <p><strong>Чтобы забронировать, перейдите по ссылке:</strong></p>
+      <p><a href="https://max.ru/u/f9LHodD0cOKjfUtiDFB5X8RWcJbV8vfsfDat3PkGOKWVnFn-PLmIX2QoIZY" target="_blank" rel="noopener noreferrer" style="color: #7fe0ff; font-weight: 700;">ЗАБРОНИРОВАТЬ</a></p>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО АДРЕС -->
+  <div class="modal" id="addressModal">
+    <div class="modal-content">
+      <button class="close" data-close type="button">&times;</button>
+      <h2>Как добраться</h2>
+      <p><strong>Адрес:</strong> <strong>Москва, у Живописного моста, парк Сказка, рядом с Москвой-рекой</strong></p>
+      <p><strong>Метро:</strong> <strong>Мирный (10 минут пешком до воды)</strong></p>
+      <p><strong>На машине:</strong> <strong>парковка рядом с местом встречи</strong></p>
+      <p><strong>Телефон:</strong> <strong>8 (989) 604-61-53</strong></p>
+    </div>
+  </div>
+
+<!-- МОДАЛЬНОЕ ОКНО ОФЕРТА -->
+<div class="modal" id="offerModal">
   <div class="modal-content">
     <button class="close" data-close type="button">&times;</button>
-    <h2>Бронирование</h2>
-    <p>Чтобы забронировать, перейдите по ссылке:</p>
-    <p><a href="https://wa.me/79896046153" target="_blank" rel="noopener noreferrer" style="color: #7fe0ff; font-weight: 700;">тут будет ссылка</a></p>
+    <h2>Публичная оферта</h2>
+    <div class="offer-content">
+      <p><strong>ПУБЛИЧНАЯ ОФЕРТА</strong></p>
+      <p><strong>На предоставление услуг проката сапбордов и байдарок</strong></p>
+      <p><strong>Город: Москва</strong></p>
+      <p><strong>Дата вступления в силу: с момента размещения на сайте</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>1. ОБЩИЕ ПОЛОЖЕНИЯ</strong></p>
+      <p><strong>1.1. Публичная оферта является официальным предложением Индивидуального предпринимателя Лукьянова Алена Алексеевна (далее — «Организатор») на предоставление услуг проката сапбордов и байдарок.</strong></p>
+      
+      <p><strong>1.2. Согласно п. 2 ст. 437 ГК РФ, в случае принятия условий настоящей оферты, лицо, осуществляющее акцепт, становится Заказчиком и приобретает право на получение услуг от Организатора.</strong></p>
+      
+      <p><strong>1.3. Принятие условий оферты (акцепт) осуществляется путем оформления и оплаты заказа на сайте или через форму бронирования.</strong></p>
+      
+      <p><strong>1.4. Настоящая оферта регулирует отношения между Организатором и Заказчиком в соответствии с законодательством Российской Федерации.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>2. ОПИСАНИЕ УСЛУГ</strong></p>
+      <p><strong>2.1. Организатор предоставляет следующие услуги:</strong></p>
+      <ul style="padding-left: 20px; margin: 10px 0;">
+        <li><strong>Прокат сапбордов (SUP-досок) с веслом и жилетом</strong></li>
+        <li><strong>Прокат байдарок (катамаранов) скомплектованным для группы</strong></li>
+        <li><strong>Инструктаж по безопасности перед выходом на воду</strong></li>
+        <li><strong>Групповые прогулки с инструктором</strong></li>
+      </ul>
+      
+      <p><strong>2.2. Услуги предоставляются в летний сезон (май — сентябрь) при благоприятных погодных условиях.</strong></p>
+      
+      <p><strong>2.3. Место оказания услуг: Москва, у Живописного моста, парк Сказка, рядом с Москвой-рекой.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>3. ПОРЯДОК ОКАЗАНИЯ УСЛУГ</strong></p>
+      <p><strong>3.1. Заказчик осуществляет бронирование услуги через сайт или по телефону.</strong></p>
+      
+      <p><strong>3.2. Перед выходом на воду Заказчик проходит инструктаж по безопасности (5–10 минут).</strong></p>
+      
+      <p><strong>3.3. Заказчик получает сапборд/байдарку, весло, жилет и необходимое оборудование.</strong></p>
+      
+      <p><strong>3.4. Время использования оборудования исчисляется с момента выхода на воду.</strong></p>
+      
+      <p><strong>3.5. Заказчик обязан соблюдать правила безопасности на воде и рекомендации инструктора.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>4. СТОИМОСТЬ И ПОРЯДОК ОПЛАТЫ</strong></p>
+      <p><strong>4.1. Стоимость услуг определяется согласно актуальным ценам на сайте:</strong></p>
+      
+      <p><strong>SUP-доска:</strong><br>
+      <strong>• 1 час в будни — 1300₽</strong><br>
+      <strong>• 2 часа в будни — 2000₽</strong><br>
+      <strong>• 1 час в выходные — 1500₽</strong><br>
+      <strong>• 2 часа в выходные — 2500₽</strong></p>
+      
+      <p><strong>Групповая прогулка с инструктором (2 часа):</strong><br>
+      <strong>• По будням — 2500₽</strong><br>
+      <strong>• По выходным — 3000₽</strong></p>
+      
+      <p><strong>Байдарка:</strong><br>
+      <strong>• 1 час в будни — 2000₽</strong><br>
+      <strong>• 2 часа в будни — 3000₽</strong><br>
+      <strong>• 1 час в выходные — 2500₽</strong><br>
+      <strong>• 2 часа в выходные — 4000₽</strong><br>
+      <strong>• Следующий час — +1000₽</strong></p>
+      
+      <p><strong>4.2. Оплата производится при встрече наличными или переводом на карту Организатора.</strong></p>
+      
+      <p><strong>4.3. Предоплата не требуется, но рекомендуется забронировать место заранее.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>5. ВОЗВРАТ И ПЕРЕНОС УСЛУГ</strong></p>
+      <p><strong>5.1. Заказчик может перенести заказ на другую дату при сообщении минимум за 24 часа до начала услуги.</strong></p>
+      
+      <p><strong>5.2. При отмене прогулки по причине плохой погоды (гроза, сильный дождь, шторм) Организатор возвращает полную стоимость заказа или предлагает перенос на другую дату.</strong></p>
+      
+      <p><strong>5.3. При отказе Заказчика от услуги менее чем за 24 часа стоимость не возвращается.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>6. ОТВЕТСТВЕННОСТЬ СТОРОН</strong></p>
+      <p><strong>6.1. Заказчик несет ответственность за соблюдение правил безопасности на воде и сохранность полученного оборудования.</strong></p>
+      
+      <p><strong>6.2. Организатор не несет ответственности за ущерб, возникший вследствие нарушения Заказчиком правил безопасности.</strong></p>
+      
+      <!-- ИСПРАВЕН: 6.3 (неграмотный фрагмент "musi" → "должен") -->
+      <p><strong>6.3. Заказчик должен быть в костюме, подходящем для воды, и иметь сменную одежду.</strong></p>
+      
+      <p><strong>6.4. Дети от 6 лет могут участвовать при условии сопровождения взрослых.</strong></p>
+      
+      <p><strong>6.5. С собаками можно при условии наличия жилета для плавания.</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>7. РЕКВИЗИТЫ ОРГАНИЗАТОРА</strong></p>
+      <p><strong>Название организации:</strong><br>
+      <strong>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ ЛУКЬЯНОВА АЛЕНА АЛЕКСЕЕВНА</strong></p>
+      
+      <p><strong>Юридический адрес организации:</strong><br>
+      <strong>153012, РОССИЯ, ИВАНОВСКАЯ ОБЛ, Г ИВАНОВО, УЛ ПУШКИНА, Д 30, КВ 1</strong></p>
+      
+      <p><strong>ИНН:</strong> <strong>370265868324</strong></p>
+      
+      <p><strong>ОГРН/ОГРНИП:</strong> <strong>321370200035690</strong></p>
+      
+      <p><strong>Расчетный счет:</strong> <strong>40802810700002515456</strong></p>
+      
+      <p><strong>Банк:</strong> <strong>АО «ТБанк»</strong></p>
+      
+      <p><strong>ИНН банка:</strong> <strong>7710140679</strong></p>
+      
+      <p><strong>БИК банка:</strong> <strong>044525974</strong></p>
+      
+      <p><strong>Корреспондентский счет банка:</strong> <strong>30101810145250000974</strong></p>
+      
+      <p><strong>Юридический адрес банка:</strong><br>
+      <strong>127287, г. Москва, ул. Хуторская 2-я, д. 38А, стр. 26</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>8. КОНТАКТНЫЕ ДАННЫЕ</strong></p>
+      <p><strong>Телефон:</strong> <strong>8 (989) 604-61-53</strong></p>
+      
+      <p><strong>Адрес:</strong> <strong>Москва, у Живописного моста, парк Сказка</strong></p>
+      
+      <p><strong>Режим работы:</strong> <strong>Ежедневно с 10:00 до 22:00</strong></p>
+      
+      <p><strong>Сезон:</strong> <strong>май — сентябрь</strong></p>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      
+      <p><strong>9. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</strong></p>
+      <p><strong>9.1. Все споры между Организатором и Заказчиком решаются в соответствии с законодательством Российской Федерации.</strong></p>
+      
+      <p><strong>9.2. Актуальная версия оферты доступна на сайте Организатора.</strong></p>
+      
+      <p><strong>9.3. Организатор может менять условия оферты без предварительного уведомления Заказчика.</strong></p>
+      
+      <p style="margin-top: 30px; font-size: 13px; color: rgba(255,255,255,0.7);">
+        <strong>Оферта составлена в соответствии с требованиями ГК РФ и практическими рекомендациями ЮKassa для приема онлайн-платежей.</strong>
+      </p>
+    </div>
   </div>
 </div>
+
   <script src="script.js"></script>
 </body>
 </html>
