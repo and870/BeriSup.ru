@@ -1731,3 +1731,117 @@ a {
   margin: 10px 0;
   padding-left: 20px;
 }
+
+/* 1. ЦЕНТРИРОВАНИЕ ВСЕГО ТЕКСТА */
+.hero p,
+.hero-card li,
+.hero-card-soft p,
+.textforcontent p,
+.modal-content p,
+.section-content p,
+.slide-content p,
+.faq-answer p,
+.about-section p,
+.address-section p,
+.feature-text,
+.footer-info p,
+.offer-content p {
+  text-align: center;
+}
+
+.hero h1,
+.hero-card h2,
+.hero-card-soft h2,
+.section-title,
+.section-content h2,
+.slide-content h2,
+.modal-content h2,
+.faq-question,
+.about-section h2,
+.address-section h2,
+.feature-title,
+.footer-info h3 {
+  text-align: center;
+}
+
+
+/* 2. УСИЛЕНИЕ ФОНА И ТЕКСТА ДЛЯ СЛАЙД-ШОУ */
+.slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 32px 28px;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  
+  /* ДОБАВЛЕНО: фон для текста */
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.slide-content h2 {
+  color: var(--accent);
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 18px;
+  
+  /* УСИЛЕНО: тень текста */
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
+}
+
+.slide-content p {
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.8;
+  margin-bottom: 14px;
+  
+  /* УСИЛЕНО: тень и цвет */
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+  color: #ffffff !important;
+}
+
+.slide-content .price,
+.slide-content .phone {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 18px;
+  
+  /* УСИЛЕНО: тень для цены/телефона */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 3. ТА ЖЕ ИСПРАВКА ДЛЯ FAQ (для единообразия) */
+.faq-container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 20px 18px;
+}
+
+.faq-question {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.faq-answer p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* 4. АДАПТИВНОСТЬ ДЛЯ СЛАЙД-ШОУ */
+@media (max-width: 768px) {
+  .slide-content {
+    padding: 24px 18px;
+    margin: 100px auto 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .slide-content h2 {
+    font-size: 22px;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.95);
+  }
+  
+  .slide-content p {
+    font-size: 14px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.95);
+  }
+}
