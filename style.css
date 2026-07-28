@@ -371,6 +371,30 @@ img {
   width: 100%;
 }
 
+/* ✅ РАСПИСАНИЕ (виджет YCLIENTS) */
+.schedule-section {
+  width: 100%;
+}
+
+.schedule-section .hero-text {
+  width: 100%;
+  padding: 26px;
+  text-align: center;
+}
+
+.schedule-widget-wrap {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 16px;
+}
+
+.schedule-fallback {
+  margin-top: 16px;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
 .section-background {
   position: absolute;
   inset: 0;
