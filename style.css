@@ -384,8 +384,10 @@ img {
 
 .schedule-widget-wrap {
   width: 100%;
+  max-height: 420px;
   margin-top: 20px;
   overflow-x: auto;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: 16px;
 }
@@ -1076,6 +1078,10 @@ img {
 
   .slider-section, .faq-section {
     min-height: 380px;
+  }
+
+  .schedule-widget-wrap {
+    max-height: 380px;
   }
 
   .slider-slide {
