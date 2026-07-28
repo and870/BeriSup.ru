@@ -9,5 +9,4 @@ User-agent: Googlebot
 Allow: /
 
 Host: https://berisup.moscow
-
 Sitemap: https://berisup.moscow/sitemap.xml
