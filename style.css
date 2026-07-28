@@ -371,23 +371,15 @@ img {
   width: 100%;
 }
 
-/* ✅ РАСПИСАНИЕ (виджет YCLIENTS) */
-.schedule-section {
-  width: 100%;
-}
-
-.schedule-section .hero-text {
-  width: 100%;
-  padding: 26px;
-  text-align: center;
+/* ✅ РАСПИСАНИЕ (виджет YCLIENTS, открывается в модалке) */
+.modal-content-wide {
+  max-width: 960px;
 }
 
 .schedule-widget-wrap {
   width: 100%;
-  max-height: 420px;
   margin-top: 20px;
   overflow-x: auto;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: 16px;
 }
@@ -1078,10 +1070,6 @@ img {
 
   .slider-section, .faq-section {
     min-height: 380px;
-  }
-
-  .schedule-widget-wrap {
-    max-height: 380px;
   }
 
   .slider-slide {
