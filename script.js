@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const openModal = (modalId) => {
     const modal = document.getElementById(modalId);
     if (!modal) return;
-    
+
     modals.forEach(modal => modal.style.display = 'none');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
-    
+
     if (bookBtn) {
       bookBtn.style.display = 'none';
     }
@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     modals.forEach(modal => modal.style.display = 'none');
     document.body.style.overflow = '';
-    
+
     if (bookBtn) {
       bookBtn.style.display = '';
       bookBtn.style.visibility = 'visible';
       bookBtn.style.opacity = '1';
     }
-    
+
     if (mobileMenuBtn && navButtons) {
       mobileMenuBtn.classList.remove('active');
       navButtons.classList.remove('active');
@@ -75,13 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileMenuBtn && navButtons) {
     mobileMenuBtn.classList.remove('active');
     navButtons.classList.remove('active');
-    
+
     mobileMenuBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       const isActive = mobileMenuBtn.classList.contains('active');
-      
+
       if (isActive) {
         mobileMenuBtn.classList.remove('active');
         navButtons.classList.remove('active');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mobileMenuBtn.classList.contains('active')) {
         const isClickInsideMenu = navButtons.contains(e.target);
         const isClickOnMenuBtn = mobileMenuBtn.contains(e.target);
-        
+
         if (!isClickInsideMenu && !isClickOnMenuBtn) {
           mobileMenuBtn.classList.remove('active');
           navButtons.classList.remove('active');
@@ -191,13 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!bookBtn || !footer) {
       return;
     }
-    
+
     const footerRect = footer.getBoundingClientRect();
     const bookBtnRect = bookBtn.getBoundingClientRect();
-    
+
     const footerTopVisible = footerRect.top;
     const bookBtnBottom = bookBtnRect.bottom;
-    
+
     if (footerTopVisible > 0 && bookBtnBottom >= footerTopVisible) {
       bookBtn.style.visibility = 'hidden';
       bookBtn.style.opacity = '0';
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ticking = true;
       }
     }, { passive: true });
-    
+
     hideBookBtnOnFooter();
     window.addEventListener('resize', hideBookBtnOnFooter);
   }
@@ -228,10 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
-    
+
     question.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
-      
+
       if (!isOpen) {
         faqItems.forEach(otherItem => {
           otherItem.classList.remove('active');
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const pageNum = index + 1;
       page.style.display = pageNum === currentFaqPage ? 'block' : 'none';
     });
-    
+
     faqDots.forEach((dot, index) => {
       const pageNum = index + 1;
       dot.classList.toggle('active', pageNum === currentFaqPage);
@@ -302,21 +302,21 @@ document.addEventListener('DOMContentLoaded', () => {
       faqTouchStartX = e.changedTouches[0].clientX;
       faqTouchStartY = e.changedTouches[0].clientY;
     }, { passive: true });
-    
+
     faqSection.addEventListener('touchend', (e) => {
       faqTouchEndX = e.changedTouches[0].clientX;
       faqTouchEndY = e.changedTouches[0].clientY;
       handleFaqSwipe();
     }, { passive: true });
-    
+
     function handleFaqSwipe() {
       const swipeDistanceX = faqTouchEndX - faqTouchStartX;
       const swipeDistanceY = faqTouchEndY - faqTouchStartY;
-      
+
       if (Math.abs(swipeDistanceY) > faqMaxVerticalMove) {
         return;
       }
-      
+
       if (Math.abs(swipeDistanceX) > faqMinSwipeDistance) {
         if (swipeDistanceX < 0) {
           currentFaqPage = (currentFaqPage + 1) % totalFaqPages;
@@ -346,13 +346,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSlider() {
     if (!sliderTrack) return;
-    
+
     sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
+
     sliderSlides.forEach((slide, index) => {
       slide.classList.toggle('active', index === currentSlide);
     });
-    
+
     sliderDots.forEach((dot, index) => {
       dot.classList.toggle('active', index === currentSlide);
     });
@@ -414,25 +414,25 @@ document.addEventListener('DOMContentLoaded', () => {
       touchStartX = e.changedTouches[0].clientX;
       touchStartY = e.changedTouches[0].clientY;
     }, { passive: true });
-    
+
     sliderTrack.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].clientX;
       touchEndY = e.changedTouches[0].clientY;
       handleSwipe();
     }, { passive: true });
-    
+
     function handleSwipe() {
       const swipeDistanceX = touchEndX - touchStartX;
       const swipeDistanceY = touchEndY - touchStartY;
-      
+
       if (Math.abs(swipeDistanceY) > maxVerticalMove) {
         return;
       }
-      
+
       if (Math.abs(swipeDistanceX) > minSwipeDistance) {
         userInteracted = true;
         stopAutoSlide();
-        
+
         if (swipeDistanceX < 0) {
           currentSlide = (currentSlide + 1) % totalSlides;
         } else {
